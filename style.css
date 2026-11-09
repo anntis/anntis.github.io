@@ -48,6 +48,12 @@ footer{max-width:960px;margin:0 auto;padding:28px 24px 48px;color:var(--muted);f
  .bio h1,.cv h1{font-size:2rem}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-.more{margin-top:10px}
-.more summary{cursor:pointer;color:var(--accent);font-weight:600}
+.thesis{margin:10px 0 0}
+.more{margin-top:6px}
+.more summary{cursor:pointer;color:var(--accent);font-weight:600;list-style:none;display:inline-flex;align-items:center;gap:6px;padding:2px 0}
+.more summary::-webkit-details-marker{display:none}
+.more summary::before{content:"▸";transition:transform .2s}
+.more[open] summary::before{transform:rotate(90deg)}
+.more summary:hover{text-decoration:underline}
+.more summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
 .more p{margin:8px 0 0;color:var(--muted);font-size:.95rem}
