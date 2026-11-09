@@ -57,3 +57,4 @@ footer{max-width:960px;margin:0 auto;padding:28px 24px 48px;color:var(--muted);f
 .more summary:hover{text-decoration:underline}
 .more summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
 .more p{margin:8px 0 0;color:var(--muted);font-size:.95rem}
+.grade{margin:6px 0 0}
