@@ -1,7 +1,6 @@
 @font-face{font-family:"Sen";font-weight:400;font-style:normal;font-display:swap;src:url("fonts/sen-v12-latin-regular.woff2") format("woff2")}
 @font-face{font-family:"Sen";font-weight:700;font-style:normal;font-display:swap;src:url("fonts/sen-v12-latin-700.woff2") format("woff2")}
-:root{--bg:#f7f8f6;--ink:#1d2421;--muted:#5d6762;--line:#dde2de;--accent:#1f6f5c;--chip:#e8eee9}
-@media (prefers-color-scheme:dark){:root{--bg:#141a17;--ink:#e6ebe7;--muted:#9aa5a0;--line:#2a332f;--accent:#6fcfb3;--chip:#1e2723}}
+:root{color-scheme:dark;--bg:#141a17;--ink:#e6ebe7;--muted:#9aa5a0;--line:#2a332f;--accent:#6fcfb3;--chip:#1e2723}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 "Sen",system-ui,sans-serif}
