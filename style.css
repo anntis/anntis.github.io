@@ -71,6 +71,6 @@ body::after{right:0;-webkit-mask-image:linear-gradient(to left,#000 55%,transpar
   .photo{position:relative;z-index:1;box-shadow:0 0 0 6px var(--bg)}
 
   /* CV: паттерн за заголовком */
-  .cv h1{position:relative;z-index:0}
-  .cv h1::before{content:"";position:absolute;z-index:-1;top:-48px;bottom:-28px;left:-24px;right:-24px;background:url("pattern.svg") repeat left top;background-size:150px 100px;opacity:.35;pointer-events:none;-webkit-mask-image:linear-gradient(to bottom,#000 70%,transparent);mask-image:linear-gradient(to bottom,#000 70%,transparent)}
+  .cv{position:relative}
+  .cv::before{content:"";position:absolute;z-index:-1;top:0;left:0;right:0;height:150px;background:url("pattern.svg") repeat left top;background-size:150px 100px;opacity:.35;pointer-events:none;-webkit-mask-image:linear-gradient(to bottom,#000 55%,transparent);mask-image:linear-gradient(to bottom,#000 55%,transparent)}
 }
