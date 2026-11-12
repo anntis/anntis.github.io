@@ -74,3 +74,17 @@ body::after{right:0;-webkit-mask-image:linear-gradient(to left,#000 55%,transpar
   .cv{position:relative}
   .cv::before{content:"";position:absolute;z-index:-1;top:0;left:0;right:0;height:150px;background:url("pattern.svg") repeat left top;background-size:150px 100px;opacity:.35;pointer-events:none;-webkit-mask-image:linear-gradient(to bottom,#000 55%,transparent);mask-image:linear-gradient(to bottom,#000 55%,transparent)}
 }
+.hobbies{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:20px}
+.hobby{position:relative;min-height:200px;border:1.5px solid var(--line);border-radius:22px;background:var(--chip);transition:border-color .25s,transform .25s}
+.hobby:not(.open):hover{border-color:var(--accent);transform:translateY(-3px)}
+.hobby-front{position:absolute;inset:0;width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;background:none;border:0;border-radius:inherit;color:var(--muted);font:inherit;font-size:.88rem;cursor:pointer}
+.hobby-front[hidden]{display:none}
+.hobby-front svg{width:84px;height:84px;transition:transform .25s}
+.hobby-front:hover svg{transform:scale(1.1)}
+.hobby-front:hover{color:var(--ink)}
+.hobby-front::after{content:"+";position:absolute;top:10px;right:16px;font-size:1.4rem;line-height:1;color:var(--accent);opacity:.7}
+.hobby-front:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.hobby-text{padding:22px;font-size:.95rem;outline:none;animation:hobbyfade .45s ease}
+.hobby-text p{margin:0}
+@keyframes hobbyfade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (max-width:720px){.hobbies{grid-template-columns:1fr}.hobby{min-height:160px}}
