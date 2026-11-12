@@ -7,6 +7,18 @@
 <meta name="description" content="CV of Anna Mamaeva: experience, education and skills.">
 <link rel="stylesheet" href="style.css">
 </head>
+<script>
+document.querySelectorAll('.hobby-front').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var card = btn.closest('.hobby');
+    var text = card.querySelector('.hobby-text');
+    card.classList.add('open');
+    btn.hidden = true;
+    text.hidden = false;
+    text.focus();
+  });
+});
+</script>
 <body>
 <header class="top">
   <a class="brand" href="index.html">Anna Mamaeva</a>
@@ -130,6 +142,32 @@
   <dt>German</dt><dd>Limited working proficiency</dd>
   <dt>Spanish</dt><dd>Elementary</dd>
 </dl>
+<h2>Hobbies</h2>
+<div class="hobbies">
+  <div class="hobby">
+    <button class="hobby-front" type="button" aria-label="Horse riding: click to read more">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><rect x="22" y="76" width="5" height="18" rx="2" fill="#6f8a7e"/><rect x="73" y="76" width="5" height="18" rx="2" fill="#6f8a7e"/><rect x="20" y="82" width="60" height="4.5" rx="2.2" fill="#8fa89d"/><path d="M24 50 Q8 46 8 62" fill="none" stroke="#6f8a7e" stroke-width="4.5" stroke-linecap="round"/><g fill="#8fa89d" stroke="#8fa89d" stroke-linecap="round" stroke-linejoin="round"><path d="M30 58 L18 64 L12 71" fill="none" stroke-width="5"/><path d="M35 60 L25 68 L21 75" fill="none" stroke-width="5"/><path d="M66 60 L77 62 L74 70" fill="none" stroke-width="5"/><path d="M61 62 L71 67 L67 73" fill="none" stroke-width="5"/><ellipse cx="48" cy="54" rx="25" ry="12" transform="rotate(-14 48 54)" stroke="none"/><path d="M66 50 L80 35" fill="none" stroke-width="11"/><ellipse cx="88" cy="34" rx="9" ry="4.6" transform="rotate(42 88 34)" stroke="none"/><path d="M80 28 L82 20 L86 27 Z" stroke="none"/></g><path d="M62 46 Q69 37 76 31" fill="none" stroke="#6f8a7e" stroke-width="3.5" stroke-linecap="round"/><g fill="none" stroke="#d3dfd8" stroke-linecap="round" stroke-linejoin="round"><path d="M46 46 L55 55 L51 64" stroke-width="5"/><path d="M46 46 L58 31" stroke-width="7"/><path d="M58 33 L69 38" stroke-width="3.5"/></g><circle cx="62" cy="23" r="6" fill="#d3dfd8"/><path d="M56 23 A6 6 0 0 1 68 23 Z" fill="#6f8a7e"/></svg>
+      <span>Horse riding</span>
+    </button>
+    <div class="hobby-text" hidden tabindex="-1"><p>I have been horse riding for 10 years. Horses definitely bring happiness to my life.</p></div>
+  </div>
+
+  <div class="hobby">
+    <button class="hobby-front" type="button" aria-label="Drawing: click to read more">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><path d="M46 62 L33.5 25" fill="none" stroke="#d3dfd8" stroke-width="5.5" stroke-linecap="round"/><path d="M33.5 25 L30.5 16.5" fill="none" stroke="#6f8a7e" stroke-width="7.5"/><ellipse cx="28.6" cy="10" rx="4.2" ry="8" transform="rotate(-19 28.6 10)" fill="#d3dfd8"/><path d="M54 62 L67.5 23.5" fill="none" stroke="#d3dfd8" stroke-width="5.5" stroke-linecap="round"/><path d="M67.5 23.5 L70.5 15" fill="none" stroke="#6f8a7e" stroke-width="7.5"/><ellipse cx="72.5" cy="8.5" rx="4.2" ry="8" transform="rotate(19 72.5 8.5)" fill="#d3dfd8"/><rect x="30" y="54" width="40" height="38" rx="9" fill="#8fa89d"/><rect x="27" y="50" width="46" height="9" rx="4.5" fill="#a5bcb1"/><rect x="37" y="68" width="26" height="14" rx="4" fill="#2e3d37"/></svg>
+      <span>Drawing</span>
+    </button>
+    <div class="hobby-text" hidden tabindex="-1"><p>I have been drawing for as long as I can remember. I especially enjoy drawing people and making them happy with their own portraits. Recently I also started scrapbooking to keep all my memories in one pretty book.</p></div>
+  </div>
+
+  <div class="hobby">
+    <button class="hobby-front" type="button" aria-label="Photos and Pinterest: click to read more">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#8fa89d" d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/></svg>
+      <span>Photos &amp; Pinterest</span>
+    </button>
+    <div class="hobby-text" hidden tabindex="-1"><p>I love taking photos and spreading aesthetic or cute, fun pictures around. You can find my <a class="ext" href="https://ch.pinterest.com/annammamaeva/" target="_blank" rel="noopener noreferrer">Pinterest page</a>. Besides that, I like learning how social media algorithms are built.</p></div>
+  </div>
+</div>  
 </main>
 <footer>© Anna Mamaeva</footer>
 </body>
