@@ -75,16 +75,15 @@ body::after{right:0;-webkit-mask-image:linear-gradient(to left,#000 55%,transpar
   .cv::before{content:"";position:absolute;z-index:-1;top:0;left:0;right:0;height:150px;background:url("pattern.svg") repeat left top;background-size:150px 100px;opacity:.35;pointer-events:none;-webkit-mask-image:linear-gradient(to bottom,#000 55%,transparent);mask-image:linear-gradient(to bottom,#000 55%,transparent)}
 }
 .hobbies{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:20px}
-.hobby{position:relative;min-height:220px;border:1.5px solid var(--line);border-radius:22px;background:var(--chip);transition:border-color .25s,transform .25s}
+.hobby{display:grid;min-height:170px;border:1.5px solid var(--line);border-radius:22px;background:var(--chip);transition:border-color .25s,transform .25s}
 .hobby:not(.open){cursor:pointer}
 .hobby:not(.open):hover{border-color:var(--accent);transform:translateY(-3px) scale(1.015)}
-.hobby-front{position:absolute;inset:0;width:100%;display:flex;align-items:center;justify-content:center;background:none;border:0;border-radius:inherit;padding:0;cursor:pointer}
+.hobby-front{grid-area:1/1;width:100%;display:flex;align-items:center;justify-content:center;background:none;border:0;border-radius:inherit;padding:0;cursor:pointer}
 .hobby-front svg{width:120px;height:120px;transition:transform .25s}
 .hobby:hover .hobby-front svg{transform:scale(1.08)}
 .hobby-front:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 .hobby.open .hobby-front{display:none}
-.hobby:not(.open) .hobby-text{display:none}
-.hobby-text{padding:24px;font-size:.95rem;outline:none;animation:hobbyfade .45s ease}
+.hobby-text{grid-area:1/1;padding:24px;font-size:.95rem;outline:none;visibility:hidden;opacity:0;transform:translateY(6px);transition:opacity .45s ease,transform .45s ease}
 .hobby-text p{margin:0}
-@keyframes hobbyfade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
-@media (max-width:720px){.hobbies{grid-template-columns:1fr}.hobby{min-height:180px}}
+.hobby.open .hobby-text{visibility:visible;opacity:1;transform:none}
+@media (max-width:720px){.hobbies{grid-template-columns:1fr}}
