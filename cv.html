@@ -171,5 +171,23 @@ document.addEventListener('click', function (e) {
   text.focus();
 });
 </script>
+<script>
+(function () {
+  var items = document.querySelectorAll('.cv h2, .cv .entry, .cv .skills, .cv .hobbies');
+  if (!('IntersectionObserver' in window)) return;
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.1 });
+  items.forEach(function (el) {
+    el.classList.add('reveal');
+    io.observe(el);
+  });
+})();
+</script>
 </body>
 </html>
