@@ -87,3 +87,6 @@ body::after{right:0;-webkit-mask-image:linear-gradient(to left,#000 55%,transpar
 .hobby-text p{margin:0}
 .hobby.open .hobby-text{visibility:visible;opacity:1;transform:none}
 @media (max-width:720px){.hobbies{grid-template-columns:1fr}}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
